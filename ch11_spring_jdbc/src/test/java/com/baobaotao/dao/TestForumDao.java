@@ -27,7 +27,8 @@ public class TestForumDao {
 	private ForumDao forumDao;
 
 	@Test
-	public void testAddForums() throws Throwable {	
+    @Rollback(false)
+    public void testAddForums() throws Throwable {
 		List<Forum> forums = new ArrayList<Forum>();
 		for(int i =0 ;i< 100000 ;i++){
 			Forum f1 = new Forum();
@@ -39,6 +40,7 @@ public class TestForumDao {
 	}
 
 	@Test
+    @Rollback(false)
 	public void testAddForum() {
 		Forum forum = new Forum();
 		forum.setForumName("1二手市场");

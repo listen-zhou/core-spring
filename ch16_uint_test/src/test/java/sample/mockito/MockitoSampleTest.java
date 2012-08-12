@@ -16,7 +16,7 @@ public class MockitoSampleTest {
 	UserService mockUserService = mock(UserService.class);
 	//模拟实现类
 	UserServiceImpl mockServiceImpl = mock(UserServiceImpl.class);
-	//基于注释模拟类
+	//基于注解模拟类
     @Mock User mockUser;
     
     @Before 

@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 import com.baobaotao.domain.User;
 
 @SpringApplicationContext( { "classpath:applicationContext.xml",
-		"file:webapp/WEB-INF/baobaotao-servlet.xml" })
+		"file:D:/ideaspace/spring3-core/ch16_uint_test/src/main/webapp/WEB-INF/baobaotao-servlet.xml" })
 public class LoginControllerTest extends UnitilsJUnit4 {
 	// ① 从Spring容器中加载AnnotationMethodHandlerAdapter
 	@SpringBeanByType
@@ -43,13 +43,13 @@ public class LoginControllerTest extends UnitilsJUnit4 {
 		response = new MockHttpServletResponse();
 	}
 
-	//@Test
+	@Test
 	public void loginCheck() {
 		MultiValueMap<String, String> map = new LinkedMultiValueMap<String, String>();
 		map.add("userName", "john");
 		map.add("password", "1234");
 		String result = restTemplate.postForObject(
-				"http://localhost/chapter16/loginCheck.html", map, String.class);
+				"http://localhost:8080/ch16/loginCheck.html", map, String.class);
 		assertNotNull(result);
 		assertThat(result, containsString("用户名或密码错误"));
 
@@ -57,7 +57,7 @@ public class LoginControllerTest extends UnitilsJUnit4 {
 		map.add("userName", "tom");
 		map.add("password", "1234");
 	    result = restTemplate.postForObject(
-				"http://localhost/chapter16/loginCheck.html", map, String.class);
+				"http://localhost:8080/ch16/loginCheck.html", map, String.class);
 		System.out.println(result);
 	    assertNotNull(result);
 		assertThat(result, containsString("tom,欢迎您进入宝宝淘论坛"));

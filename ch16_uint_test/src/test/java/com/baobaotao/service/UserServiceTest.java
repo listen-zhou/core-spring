@@ -37,7 +37,7 @@ public class UserServiceTest extends UnitilsJUnit4 {
 
 	}
 	
-	//@Test
+	@Test
 	public void hasMatchUser() {
 		 User user = new User();
 		 user.setUserName("tom");

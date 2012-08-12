@@ -29,6 +29,7 @@ public class TestPostDao{
 	private PostDao postDao;
 	
     @Test
+    @Rollback(false)
 	public void testAddPost() throws Throwable{
 		Post post = new Post();
 		post.setUserId(2);

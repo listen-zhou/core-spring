@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS sampledb16;
 CREATE DATABASE sampledb16 DEFAULT CHARACTER SET utf8;
 USE sampledb16;
 
-##´´½¨ÓÃ»§±í
+-- åˆ›å»ºç”¨æˆ·è¡¨
 CREATE TABLE t_user (
    user_id   INT AUTO_INCREMENT PRIMARY KEY,
    user_name VARCHAR(30),
@@ -12,7 +12,7 @@ CREATE TABLE t_user (
    last_ip  VARCHAR(23)
 )ENGINE=InnoDB; 
 
-##´´½¨ÓÃ»§µÇÂ¼ÈÕÖ¾±í
+-- åˆ›å»ºç”¨æˆ·ç™»å½•æ—¥å¿—è¡¨
 CREATE TABLE t_login_log (
    login_log_id  INT AUTO_INCREMENT PRIMARY KEY,
    user_id   INT,
@@ -20,7 +20,7 @@ CREATE TABLE t_login_log (
    login_datetime datetime
 )ENGINE=InnoDB; 
 
-##²åÈë³õÊ¼»¯Êı¾İ
+-- æ’å…¥åˆå§‹åŒ–æ•°æ®
 INSERT INTO t_user (user_name,password,credits) 
              VALUES('tom','123456',0);
 COMMIT;

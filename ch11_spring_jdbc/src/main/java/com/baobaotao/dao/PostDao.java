@@ -48,7 +48,7 @@ public class PostDao {
 				}
 			});
 
-    };
+    }
 
 	public void getNativeConn() {
 	};
@@ -68,7 +68,7 @@ public class PostDao {
 					}
 				});
 
-	};
+	}
 
 	public void getAttach(final int postId, final OutputStream os) {
 		String sql = "SELECT post_attach FROM t_post WHERE post_id=? ";
@@ -87,5 +87,5 @@ public class PostDao {
 			}
 		);
 
-	};
+	}
 }
